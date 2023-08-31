@@ -61,14 +61,7 @@ export default {
         const response = await fetch('https://fakestoreapi.com/products');
         const data = await response.json();
 
-        // Filter and store products with specific categories
         this.products = data;
-        // .filter((product) => {
-        //   return (
-        //     product.category === "men's clothing" ||
-        //     product.category === "women's clothing"
-        //   );
-        // });
 
         this.currentProduct = this.products[this.currentIndex];
         this.productAvailable = true;
@@ -92,7 +85,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 :root {
   --baby-blue: #d6e6ff;
